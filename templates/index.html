@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container text-center">
+    <h1 class="mt-5">GLB Scraper</h1>
+    <p>
+      This tool currently only scrapes GLB files from Target.
+    </p>
+    <form action="{{ url_for('index') }}" method="post" class="mb-3 d-inline-block">
+      <div class="form-group">
+        <label for="url"><strong>Input the Product URL here:</strong></label>
+        <div class="input-group mb-3">
+          <input type="text" name="url" id="url" class="form-control" placeholder="e.g., https://www.target.com/p/some-product-name/-/A-12345678" required style="width: 700px;">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Scrape</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endblock %}
